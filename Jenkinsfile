@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+FORCED ERROR IN JENKINSFILE
     stages {
         stage('Build') {
             steps {
