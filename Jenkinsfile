@@ -4,25 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...'
-                sh 'mvn clean package'
-                echo 'Build stage successful'
+                echo 'Compiling the C++ file...'
+                sh 'g++ -o PES1UG22CS377-1 newcppfile.cpp' 
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'mvn test'
-                echo 'Test stage successful'
+                echo 'Running the compiled program...'
+                sh './PES1UG22CS377-1' 
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sh './deploy.sh'
-                echo 'Deploy stage completed'
             }
         }
     }
