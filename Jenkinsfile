@@ -1,6 +1,5 @@
 pipeline {
     agent any
-FORCED ERROR IN JENKINSFILE
     stages {
         stage('Build') {
             steps {
@@ -11,6 +10,7 @@ FORCED ERROR IN JENKINSFILE
 
         stage('Test') {
             steps {
+                FORCED ERROR IN JENKINSFILE
                 echo 'Running the compiled program...'
                 sh './PES1UG22CS377-1' 
             }
